@@ -5,7 +5,7 @@ from typing import Any
 class InstanceTracker:
     """Instance with modifications tracker."""
 
-    def __init__(self, instance, fields_to_track):
+    def __init__(self, instance, fields_to_track: list[str]):
         self.instance = instance
         self.fields_to_track = fields_to_track
         self.initial_instance_values: dict[str, Any] = deepcopy(self.get_field_values())
